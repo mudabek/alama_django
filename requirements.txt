@@ -11,7 +11,6 @@ dbus-python==1.2.18
 distro==1.7.0
 Django==4.2.4
 django-crispy-forms==2.0
-duplicity
 fasteners==0.14.1
 future==0.18.2
 gyp==0.1
