@@ -14,7 +14,7 @@ django-crispy-forms==2.0
 fasteners==0.14.1
 future==0.18.2
 httplib2==0.20.2
-idna==3.3
+idna
 importlib-metadata==4.6.4
 jeepney==0.7.1
 keyring==23.5.0
