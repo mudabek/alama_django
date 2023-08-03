@@ -9,7 +9,6 @@ crispy-bootstrap4==2022.1
 cryptography==3.4.8
 dbus-python==1.2.18
 distro==1.7.0
-distro-info===1.1build1
 Django==4.2.4
 django-crispy-forms==2.0
 duplicity==0.8.21
