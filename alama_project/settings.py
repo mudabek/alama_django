@@ -79,24 +79,24 @@ WSGI_APPLICATION = "alama_project.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'URL': 'postgresql://postgres:04yPUjORbc528xXW5aFa@containers-us-west-167.railway.app:5835/railway',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': '04yPUjORbc528xXW5aFa',
-#         'HOST': 'containers-us-west-167.railway.app',
-#         'PORT': 5835,
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:04yPUjORbc528xXW5aFa@containers-us-west-167.railway.app:5835/railway   ',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '04yPUjORbc528xXW5aFa',
+        'HOST': 'containers-us-west-167.railway.app',
+        'PORT': 5835,
+    }
+}
 
 
 # Password validation
