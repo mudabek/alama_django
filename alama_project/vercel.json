@@ -1,0 +1,14 @@
+{
+    "builds": [
+      {
+        "src": "alama_project/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "alama_project/wsgi.py"
+      }
+    ]
+}

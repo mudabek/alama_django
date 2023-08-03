@@ -1,0 +1,24 @@
+{% extends "courses/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST"> <!--  -->
+            {% csrf_token %} <!-- For security purpose -->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Kirish</legend>
+                {{ form|crispy }} <!-- crispy formats things nicely; imported in settings.py -->
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline_info" type="submit">Kirish</button>
+                <small class="text-muted">
+                    <a href="{% url 'password_reset' %}">Parol o'zgartirish</a>
+                </small>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Akkaunt kerakmi? <a class="ml-2" href="{% url 'register' %}">Registratsiya qiling</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

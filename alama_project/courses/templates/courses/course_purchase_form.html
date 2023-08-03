@@ -1,0 +1,16 @@
+{% extends "courses/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST"> <!--  -->
+            {% csrf_token %} <!-- For security purpose -->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">To'lo'v</legend>
+                {{ form|crispy }} <!-- crispy formats things nicely; imported in settings.py -->
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline_info" type="submit">Olish</button>
+            </div>  
+        </form>
+    </div>
+{% endblock content %}

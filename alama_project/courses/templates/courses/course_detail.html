@@ -1,0 +1,46 @@
+<!-- Inherits from base.html -->
+{% extends "courses/base.html" %}
+<!-- We use object because DetailView expects object -->
+{% block content %}
+    <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+        <div class="media-body">
+            <div class="article-metadata">
+            <a class="mr-2" href="{% url 'user-courses' object.author.username %}">{{ object.author }}</a>
+            <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+            {% if object.author == user %}
+                <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'course-update' object.id%}">Kursi o'zgartirish</a>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'lecture-create' object.id%}">Dars qo'shish</a>
+                    <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'course-delete' object.id%}">Kursni o'chirish</a>
+                </div>
+            {% elif object not in user.profile.courses_purchased.all %}
+                <div>
+                    <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'course-purchase' object.id%}">Kursni sotib oling</a>
+                </div>
+            {% endif %}
+            </div>
+            <h2 class="article-title" id="course-title">{{ object.title }}</h2>
+            <h5 class="text-muted">Narx: {{ course.price}} so'm</h5>
+            <p class="article-content" id="course-description">{{ object.description }}</p>
+        </div>
+        </article>
+{% endblock content%}
+
+{% block sideinfo %}
+<div class="col-md-4">
+<div class="content-section">
+    <h3>Kurs Darslari</h3>
+    <p class='text-muted'>Dars tanlang
+    <ul class="list-group">
+        {% for lecture in object.lectures.all %}
+            <li class="list-group-item list-group-item-light">
+                <a href="/lecture/{{ lecture.id }}" class="list-group-item">{{lecture.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    </p>
+</div>
+</div>
+{% endblock sideinfo%}
+ 

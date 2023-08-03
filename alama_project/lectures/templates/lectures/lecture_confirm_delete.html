@@ -1,0 +1,16 @@
+{% extends "courses/base.html" %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST"> <!--  -->
+            {% csrf_token %} <!-- For security purpose -->
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Darsni O'chirish</legend>
+                <h2>Darsni o'chirib tashlamoqchimisiz "{{ object.title }}"</h2>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-danger" type="submit">Ha, O'chirish</button>
+                <a class="btn btn-outline-secondary" href="{% url 'lecture-detail' object.id %}">Yo'q</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
