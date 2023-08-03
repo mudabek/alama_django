@@ -13,7 +13,6 @@ Django==4.2.4
 django-crispy-forms==2.0
 fasteners==0.14.1
 future==0.18.2
-gyp==0.1
 httplib2==0.20.2
 idna==3.3
 importlib-metadata==4.6.4
