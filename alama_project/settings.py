@@ -29,7 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'alama-django.vercel.app',
     'alama-django-git-main-mudabek.vercel.app',
-    'alama-django-nckfd6pll-mudabek.vercel.app'
+    'alama-django-nckfd6pll-mudabek.vercel.app',
+    'alama-django-8unpzmmp7-mudabek.vercel.app'
 ]
 
 
