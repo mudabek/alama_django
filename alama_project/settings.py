@@ -26,13 +26,8 @@ SECRET_KEY = "django-insecure-bo10wje(g&l%mxesk_)4@#b5xe$^e954jw@93m+3#*f0(#pxer
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'alama-django.vercel.app',
-    'alama-django-git-main-mudabek.vercel.app',
-    'alama-django-nckfd6pll-mudabek.vercel.app',
-    'alama-django-8unpzmmp7-mudabek.vercel.app',
-    '127.0.0.1'
-]
+
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1']
 
 
 # Application definition
@@ -140,9 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, 'courses/static/'),
-)
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
