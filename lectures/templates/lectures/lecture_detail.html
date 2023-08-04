@@ -3,7 +3,7 @@
 <!-- We use object because DetailView expects object -->
 {% block content %}
     <article class="media content-section">
-        <img class="rounded-circle article-img" src="{{ object.course.author.profile.image.url }}">
+        <!-- <img class="rounded-circle article-img" src="{{ object.course.author.profile.image.url }}"> -->
         <div class="media-body">
             <div class="article-metadata">
             <a class="mr-2" href="{% url 'user-courses' object.course.author.username %}">{{ object.course.author }}</a>

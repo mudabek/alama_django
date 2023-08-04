@@ -6,7 +6,7 @@
     <!-- These variales are passed as dictiorary from the views.py within render -->
     {% for course in courses %} 
         <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ course.author.profile.image.url }}">
+            <!-- <img class="rounded-circle article-img" src="{{ course.author.profile.image.url }}"> -->
             <div class="media-body">
               <div class="article-metadata">
                 <a class="mr-2" href="{% url 'user-courses' course.author.username %}">{{ course.author }}</a>
